@@ -18,7 +18,7 @@ public class SesEmailSender implements EmailSenderGateway {
     }
 
     @Override
-    public void sendEmail(String to, String subject, String body) {
+    public void sendEmail(String[] to, String subject, String body) {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
             message.setFrom("joaog4030@gmail.com");

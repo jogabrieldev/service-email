@@ -15,6 +15,6 @@ public class EmailSenderService implements SenderEmailUseCase {
     }
     @Override
     public void sendEmail(String[] to, String subject, String body) {
-         this.emailSenderGateway.sendEmail(Arrays.toString(to), subject , body);
+         this.emailSenderGateway.sendEmail((to), subject , body);
     }
 }
