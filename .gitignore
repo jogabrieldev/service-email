@@ -1,10 +1,25 @@
-HELP.md
+# --- Compilação e Artefatos ---
 target/
-.mvn/wrapper/maven-wrapper.jar
+build/
+*.class
+*.war
+*.ear
+*.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# --- Maven ---
+.mvn/wrapper/maven-wrapper.jar
+/mvnw
+/mvnw.cmd
+
+# --- Configurações Locais (Segurança) ---
+# Ignora o arquivo com senhas, mas NÃO ignore o .gitignore
+application.properties
+.env
+*.log
+
+# --- STS / Eclipse ---
 .apt_generated
 .classpath
 .factorypath
@@ -13,21 +28,19 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
+# --- IntelliJ IDEA ---
+.idea/
 *.iws
 *.iml
 *.ipr
+out/
 
-### NetBeans ###
+# --- VS Code ---
+.vscode/
+
+# --- NetBeans ---
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
-.vscode/

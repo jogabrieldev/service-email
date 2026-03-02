@@ -3,6 +3,7 @@ package com.Joao.email_service.application;
 import com.Joao.email_service.adapters.EmailSenderGateway;
 import com.Joao.email_service.core.SenderEmailUseCase;
 import org.springframework.stereotype.Service;
+import java.util.Arrays;
 
 @Service
 public class EmailSenderService implements SenderEmailUseCase {
@@ -13,7 +14,7 @@ public class EmailSenderService implements SenderEmailUseCase {
         this.emailSenderGateway = emailGateway;
     }
     @Override
-    public void sendEmail(String to, String subject, String body) {
-         this.emailSenderGateway.sendEmail(to , subject , body);
+    public void sendEmail(String[] to, String subject, String body) {
+         this.emailSenderGateway.sendEmail(Arrays.toString(to), subject , body);
     }
 }
